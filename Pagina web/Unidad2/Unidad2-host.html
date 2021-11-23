@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Arquitectura de Computadoras </title>
+        <link rel="stylesheet" href="Unidad2-css.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Fuente titulo -->
+   </head>
+
+   <body>
+                              <!-- Titulos -->
+           <div id="Fondo_principal" class="secciones">	
+           
+                           <h1 align="center"> Arquitectura de Computadoras  </h1>	
+                           <p align="right"> <sub> Roberto Yair Tellez </sub> </p>
+
+           </div>
+                           <!-- Fin de Titulos -->
+                           
+                           
+                           <!-- Opciones Izquierda -->
+           <div class="secciones-left" id="left-styles">	
+
+<!-- Pagina principal -->      
+                     <br>	
+                     <div class="menu-principal" id="menu" >	
+                         <a align="right" id="paginaprin" href="../index.html" > <img src="https://cdn.icon-icons.com/icons2/1744/PNG/512/3643769-building-home-house-main-menu-start_113416.png"> <br> Pagina Principal </a>
+                     </div>
+<!-- Temario -->
+                           <h1 align="center"> Temario  </h1>
+<!-- Unidad 2 -->
+                           <h2 alig="left"> Unidad 2 </h2>
+
+    <!-- 2.1 -->
+                           <a href="#u2.1" > 2.1 Organización del procesador. </a>
+                           <br><br>
+    <!-- 2.2 -->
+                           <a href="#u2.2"> 2.2 Estructura de registros. </a>
+                           <br><br>
+                           <a href="#u2.2.1"> 2.2.1 Registros visibles para el usuario. </a>
+                           <br><br>
+                           <a href="#u2.2.2"> 2.2.2 Registros de control y de estados. </a>                             
+                           <br><br>
+                           <a href="#u2.2.3" > 2.2.3 Ejemplos de registros de CPU reales. </a> 
+    <!-- 2.3 -->
+                           <a href="#u2.3"> 2.3 El ciclo de instrucción. </a>
+                           <br><br>
+                           <a href="#u2.3.1"> 2.3.1 Ciclo Fetch-Decode-Execute. </a>
+                           <br><br>
+                           <a href="#u2.3.2">  2.3.2 Segmentación de instrucciones. </a>
+                           <br><br>
+                           <a href="#u2.3.3"> 2.3.3 Conjunto de instrucciones. Características y funciones. </a>
+                           <br><br>
+                           <a href="#u2.3.4"> 2.3.4 Modos de direccionamiento. </a>
+    <!-- 2.4 -->
+                           <br><br>
+                           <a href="#u2.4"> 2.4 Casos de estudio de CPU reales. </a>
+                           <br><br>
+                    <hr>
+<!-- Introduccion -->
+						<a alig="left" href="../Introduccion/Introduccion-host.html"> <b> Introducción </b> </a>
+						<br><br>
+				<hr>
+<!-- Unidad 1 -->
+                        <a alig="left" href="../Unidad1/Unidad1-host.html"> <b> Unidad 1 </b> </a>
+                        <br><br>
+                <hr>
+<!-- Unidad 3 -->
+                        <a alig="left" href="../Unidad3/Unidad3-host.html"> <b> Unidad 3 </b> </a>
+                        <br><br>
+                <hr>
+<!-- Unidad 4 -->
+                        <a alig="left" href="../Unidad4/Unidad4-host.html"> <b> Unidad 4 </b> </a>
+                        <br><br>
+                <hr>
+<!-- Bibliografias -->
+                        <a alig="left" href="../Bibliografias/Bibliografias-host.html"> <b> Bibliografía </b> </a>
+                        <br><br>
+                <hr>    
+           </div>
+
+                           <!-- Fin Opciones Izquierda -->
+
+            <div class="linea-separadora">  </div>
+
+                           <!-- Pantalla principal -->
+
+           <div class="secciones-center">
+
+                    <h1 align="center" id="u2"> Estructura y funcionamiento de la Unidad Central de Procesamiento </h1>
+<!-- 2.1 -->
+                    <h2 align="center" id="u2.1"> Organización del procesador </h2>
+                    <p align="center">
+                        La Unidad de Procesamiento (CPU) controla el funcionamiento del computador y lleva a cabo sus funciones de procesamiento de datos. Frecuentemente se le llama procesador.
+                        <br>Un procesador, incluye tanto registros visibles por el usuario como registros de control/estado. Los registros visibles por el usuario pueden ser de uso general o tener una utilidad especial, mientras que los registros de control y estado se usan para controlar el funcionamiento del procesador, un claro ejemplo es el contador de programa.
+                    </p>
+
+<!-- 2.2 --><hr>
+                    <h1 align="center" id="u2.2"> Estructura de registros </h1>
+                    <p align="center">
+                        Los registros se emplean para controlar las instrucciones en ejecución, manejar direccionamiento de memoria y propiciar la capacidad aritmética.
+                        <br>Los registros vienen de tres tipos: datos, direcciones e índice, que tiene lugar en casi todos los aspectos de la operación del CPU. El tamaño de un registro depende del CPU; los más simples tienen registros que aceptan 8 o 16 bits de datos y los más complejos tienen registros de 32, 48 o 64 bits.
+
+                    </p>
+                    <h2 align="center" id="u2.2.1"> Registros visibles para el usuario </h2>
+                    <p align="center">
+                        Son aquellos que pueden ser referenciado por medio del lenguaje maquina que ejecuta la CPU, los registro que normalmente disponibles son:
+                        <ul>
+                            <li> <b>Registros de propósito general:</b> son aquellos que pueden guardar tanto datos como direcciones.<li>
+                            <li> <b>Registro de datos:</b> Que pueden ser asignados por el programador a diversas funciones. En algunos casos son de propósito general y pueden ser empleados por cualquier instrucción de máquina que lleve a cabo operaciones sobre los datos. </li>
+                            <li> <b>Registros de direcciones:</b> Contienen direcciones en la memoria principal de datos y este tipo de registro puede ser de propósito general o estar a un modo específico de direccionamiento. </li>
+                            <li> <b>Códigos de condición:</b> También conocidos como indicadores o flags. Los códigos de  condición, son bits activados por el procesador como resultado de determinadas operaciones. </li>
+                        </ul>
+                    </p>
+                    <p align="center">
+                        <img align="center" class="imagenes" id="imgcomp" src="https://lh6.googleusercontent.com/proxy/6ryN4nOkLRyWPiN5DUzrZvhhTm167L-OoT-W6R8U-KlkyFJEmGJF8NpAU5zhXY_QNeIM53k-h41tPCJfZbMpWbqZnpm6iXg7jx2cdX8zKqDuxdR4A5MXS_u11NYDWzhcH_2Sb_fHLp7C=w1200-h630-p-k-no-nu">
+                    </p>
+
+                    <h2 align="center" id="u2.2.2"> Registros de control y de estados </h2>
+                    <p align="center">
+                        Se utilizan para controlar las operaciones del procesador, la mayor parte de estos registros no son visibles al usuario y algunos pueden ser accesibles a las instrucciones de maquina ejecutadas en un modo de control. Los registros utilizados son los siguientes:
+                        <ul>
+                            <li> <b>Registro de direcciones de memoria (MAR)</b>, el cual contiene la dirección en donde se efectuará la próxima lectura o escritura de datos. El numero de direcciones depende del tamaño de la MAR </li>
+                            <li> <b>Registro de datos de memoria (MBR)</b>, contiene los datos que van a ser escritos en la memoria o los que fueron leídos en ella. </li>
+                            <li> <b>Registro de direcciones de entrada y salida (I/O AR)</b>, especifica al dispositivo ya sea de entrada o salida. </li>
+                            <li> <b>Registro de datos de entrada y salida (I/O BR)</b>, es una área temporal en donde se lleva a cabo el intercambio de datos entre el procesador y el dispositivo de entrada y salida que esta especificado en IOAR. </li>
+                            <li> <b>Registro de instrucciones (IR)</b>, contiene la dirección de la siguiente instrucción que se va a ejecutar. </li>
+                            <li> <b>Palabras de estado del programa (PSW)</b>, contiene códigos de condición junto con otras informaciones de estado como el signo, acarro, desbordamiento, entre otras. </li>
+                        </ul>
+                    </p>
+                    <p align="center">
+                        <img align="center" class="imagenes" id="imgcomp" src="http://3.bp.blogspot.com/_lFxF52UrVos/Svm3OhTlU5I/AAAAAAAAAAk/KIJQRFFx058/w1200-h630-p-k-no-nu/ALU%5B1%5D.jpg">
+                    </p>
+
+                    <h2 align="center" id="u2.2.3"> Ejemplos de registros de CPU reales </h2>
+                    <p align="center">
+                        En el Motorola 68000 el mismo direccionamiento lleva implícito el tipo de registro sobre el que trabaja (direcciones o datos). Está basado en dos bancos de 8 registros de 32 bits. Un banco es de datos (Dn) y el otro de punteros (An). Además contiene un contador de programa de 32 bits y un registro de estado de 16 bits. Los registros de datos (D0 a D7) se pueden usar como registros de 32 bits (.l), 16 bits (.w) y 8 bits (.b). Cualquiera de ellos puede usarse como acumulador, índice o puntero.
+                        <br>Acepta los siguientes modos de direccionamiento:
+                        <ul>
+                            <li>Implícito (o inherente).</li>
+                            <li>Inmediato.</li>
+                            <li>Absoluto.</li>
+                            <li>Directo a registro.</li>
+                            <li>Indirecto.</li>
+                            <li>Relativo a PC con desplazamiento.</li>
+                            <li>Relativo a PC con índice y desplazamiento.</li>                        
+                        </ul>
+                    </p>
+                    <p align="center">
+                        <img align="center" class="imagenes" id="imgcom" src="https://upload.wikimedia.org/wikipedia/commons/2/28/XC68000.agr.jpg">                        
+                    </p>
+
+<!-- 2.2 --><hr>
+                    <h1 align="center" id="u2.3"> El ciclo de instrucción </h1>
+                    <p align="center">
+                        Una CPU lo que hace es ejecutar las instrucciones de un programa situado en una memoria. Todos siguen el mismo ciclo de instrucción, el cual se divide en tres etapas diferenciadas llamadas Fetch, Decode y Execute, las cuales se traducen como captación, descodificación y ejecución. 
+                        <br> 
+                        <img align="center" class="imagenes" id="imgcom" src="https://hardzone.es/app/uploads-hardzone.es/2020/11/Unidad-Control-Ciclo-Instruccion.jpg?x=480&quality=20">
+                        <br>
+                    </p>
+
+                    <h2 align="center" id="u2.3.1"> Ciclo Fetch-Decode-Execute </h2>
+                    <p align="center">
+                        La primera etapa del ciclo de instrucción se encarga de captar las instrucciones que hay en la memoria RAM asignada al procesador a través de una serie de unidades y registros que son las siguientes:
+                        <ol>
+                            <li> Program Counter o Contador de Programa. </li>
+                            <li> Memory Address Register o registro de direccionamiento de memoria. </li>
+                            <li> Memory Data Register o registro de datos a memoria. </li>
+                            <li> Instruction Register o Registro de Instrucción. </li>
+                        </ol>
+                    </p>
+                    <p align="center">
+                        La segunda etapa:
+                        <br>Hay diferentes tipos de instrucciones y no todas hacen lo mismo, por lo que dependiendo del tipo de instrucción necesitamos saber hacía que unidades de ejecución se van a enviar y la manera más clásica de hacerlo es a través de lo que llamamos un descodificador, el cual toma cada instrucción, la divide internamente según el opcode o instrucción y el dato o la dirección de memoria donde se encuentra este.
+                        <br>
+                        La última etapa es la de la ejecución de las instrucciones, en esta étapa las instrucciones son resueltas, pero no todos los tipos de instrucción se resuelven de la misma forma, ya que la forma de utilizar el hardware dependerá de la función de cada una de ellas, en general tenemos cuatro tipos de instrucciones:
+                        <ul>
+                            <li> Instrucciones de movimiento de bits: En el cual se manipula el orden de los bits que contienen el dato.</li>
+                            <li> Instrucciones aritméticas: Donde se realizan operaciones matemáticas y también lógicas, estas se solucionan en las llamadas ALU o unidades aritmético-logicas.</li>
+                            <li> Instrucciones de salto: En la que se cambia la siguiente el valor del contador de programa, lo que permite utilizar el código de manera recursiva.</li>
+                            <li> Instrucciones a memoria: Son con las que el procesador lee y escribe la información de la memoria del sistema.</li>
+                        </ul>
+                    </p>
+                    <p align="center">
+                        <img align="center" class="imagenes" id="imgcomp" src="https://hardzone.es/app/uploads-hardzone.es/2020/11/FetchProcess.jpg">
+                        Fletch
+                        <br>
+                        <img align="center" class="imagenes" id="imgcomp" src="https://hardzone.es/app/uploads-hardzone.es/2020/12/Instruction-Decoding-1.jpg">
+                        Decode
+                        <br>
+                        <img align="center" class="imagenes" id="imgcomp" src="https://hardzone.es/app/uploads-hardzone.es/2020/05/1-bit-ALU.jpg">
+                        Execute
+                        <br>
+                        
+                    </p>
+
+                    <h2 align="center" id="u2.3.2"> Segmentación de instrucciones </h2>
+                    <p align="center">
+                        La segmentación de cauce (pipelining) es una forma particularmente efectiva de organizar el hardware de la CPU para realizar más de una operación al mismo tiempo. • Consiste en descomponer el proceso de ejecución de las instrucciones en fases o etapas que permitan una ejecución simultánea. • Explota el paralelismo entre las instrucciones de un flujo secuencial.
+                        <br>La segmentación es una técnica de mejora de prestaciones a nivel de diseño hardware y la cual es invisible al programador. El diseño de procesadores segmentados tiene gran dependencia del repertorio de instrucciones.
+                    </p>
+
+                    <h2 align="center" id="u2.3.3"> Conjunto de instrucciones. Características y funciones </h2>
+                    <p align="center">
+                        El conjunto de instrucciones que maneja una computadora es una pieza 
+                        fundamental para el funcionamiento de ésta debido a que las instrucciones se 
+                        comunican directamente con el procesador para hacer un manejo adecuado de 
+                        los datos que están procesando y dependiendo del tipo de set de instrucciones 
+                        que un CPU entienda nos dirá el tipo de programas que una computadora puede
+                        llegar o no a soportar.
+                        <br><b>-Ortogonales (Simétricas)</b>
+                        <br>La ortogonalidad es una característica de las instrucciones que es considerada algo amplia en términos de lo que requiere una instrucción o un set de instrucciones para ser considerado ortogonal en primera instancia se dice que las instrucciones en un set deben de poder ser fuente y destino de cualquier elemento de la arquitectura del CPU.
+                        
+                        <br><b>-Risc</b>
+                        <br>Un juego de instrucciones Cisc se caracteriza por un número reducido de instrucciones además del uso de pipelining que permite al procesador dividir la ejecución de una instrucción en distintas fases incrementando de esa manera la velocidad de ejecución.
+
+                        <br><b>-Cisc</b>
+                        <br>A diferencia del set de instrucciones Risc, este set tiene una cantidad de instrucciones considerable pero dichas instrucciones no suelen ejecutarse por medio de segmentación o pipelining, sus instrucciones no son ortogonales eso quiere decir que se debe tener cuidado con los registros que se utilizan debido a que no se pueden direccionar de cualquier forma los datos sobre cualquier registro, se debe especificar en la instrucción.
+                        <br>
+                        Cada etapa o segmento de la cadena está especializada en un área específica de la línea de producción y lleva a cabo siempre la misma actividad. Esta tecnología es aplicada en el diseño de procesadores eficientes. A estos procesadores se les conoce como pipeline processors. Estos están compuestos por una lista de segmentos lineales y secuenciales en donde cada segmento lleva a cabo una tarea o un grupo de tareas computacionales.
+
+                    </p>
+
+                    <h2 align="center" id="u2.3.4"> Modos de direccionamiento </h2>
+                    <p align="center">
+                        Contar con diferentes formatos de instrucciones, implica contar con diferentes formas de obtener los operandos de las instrucciones. Por lo general a estas múltiples formas se les conoce como modos de direccionamiento.
+                        <ol>
+                            <li> <b>Direccionamiento por registro</b>, donde los operandos son registros. Los datos a operar están contenidos en 2 registros de 32 bits y el resultado será colocado en otro registro, del mismo tamaño. </li>
+                            <br><div class="img" align="center"> <img align="center" class="imagenes" id="imgz" src="https://www.utm.mx/~merg/AC/2009/images/03/3.7-registro.gif"> </div><br>
+                            
+                            <li> <b>Direccionamiento base o desplazamiento</b>, donde uno de los operandos está en una localidad de memoria cuya dirección es la suma de un registro y una constante que forma parte de la misma instrucción. </li>
+                            <br><div class="img" align="center"> <img align="center" class="imagenes" id="imgz" src="https://www.utm.mx/~merg/AC/2009/images/03/3.7-base.gif"> </div><br>
+                            
+                            <li> <b>Direccionamiento inmediato</b>, donde uno de los operandos es una constante que está en la misma instrucción. </li>
+                            <br><div class="img" align="center"> <img align="center" class="imagenes" id="imgz" src="https://www.utm.mx/~merg/AC/2009/images/03/3.7-inmediato.gif"> </div><br>
+                            
+                            <li> <b>Direccionamiento relativo al PC</b>, donde se forma una dirección sumando una constante, que está en la instrucción, con el registro PC (Program Counter). El resultado de la suma corresponde a la dirección destino si un brinco condicional se va a realizar </li>
+                            <br><div class="img" align="center"> <img align="center" class="imagenes" id="imgz" src="https://www.utm.mx/~merg/AC/2009/images/03/3.7-relativo_PC.gif"> </div><br>
+                            
+                            <li> <b>Direccionamiento pseudo directo</b>, donde la dirección destino de un salto corresponde a la concatenación de 26 bits que están en la misma instrucción con los bits mas significativos del PC. </li>
+                            <br><div class="img" align="center"> <img align="center" class="imagenes" id="imgz" src="https://www.utm.mx/~merg/AC/2009/images/03/3.7-pseudodirecto.gif"> </div><br>
+                        </ol>
+                    </p>
+
+<!-- 2.2 --><hr>
+                    <h1 align="center" id="u2.4"> Casos de estudio de CPU reales. </h1>
+                    <p align="center">
+                        <b>I-8086: </b>
+                        <br>Los registros del procesador, se usan para contener los datos con que se está trabajando puesto que el acceso a los registros es mucho más rápido que los accesos a memoria. Se pueden realizar operaciones aritméticas y lógicas, comparaciones, entre otras. Los modos del 8086 son indirectos por registro, indexados o directos por registro.
+                        <br>
+                        <b>80386: </b>
+                        <br>Para este microprocesador existe un modo nuevo que requiere un byte adicional denominado SIB (escala, índice, base) que se añade al byte de operandos, es útil para direccionar elementos de vectores de longitudes diferentes en bucles. Es una alternativa a los modos autoindexados que esta máquina no soporta.
+                        <br><div class="seccion-imgp" align="center"> <img align="center" class="imagenes" id="img" src="data:image/jpeg;base64,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"> </div>
+                        <div class="seccion-imgp" align="center"> <img align="center" class="imagenes" id="img" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Ic-photo-intel-A80386DX-33-IV-%28386DX%29.png"> </div>
+                    </p>
+                    
+
+<!-- exposiciones --><hr>                       
+                        <h1 align="center"> Exposición Unidad 2</h1>
+                    <p align="center">
+                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/yqwExJyQ0b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </p>
+<!-- Practica --> <hr>
+                    <h1 align="center"> Investigación de Procesadores Intel </h1>
+                        
+                    <div align="center"> <a target="_blanc" align="center" href="../Recursos/Procesadores Intel.pdf"> <img align="center" href="../Recursos/Practica1.pdf" class="imagenes" id="pdf" src="https://www.biochek.com/wp-content/uploads/2018/07/adobe-pdf-icon-logo-png-transparent.png">  </a> </div> 
+           </div>
+
+                           <!-- Fin pantalla principal-->
+
+   </body>
+</html>

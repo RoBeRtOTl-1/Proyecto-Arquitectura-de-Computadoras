@@ -1,0 +1,255 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-size: 13pt;
+	background-color: black;
+	padding: 10px;
+	margin: 0px;
+}
+
+#Fondo_principal{
+	background-image:
+	url(https://img3.wallspic.com/previews/2/1/1/0/80112/80112-los_circuitos_integrados_chips-ingenieria_electronica-tecnologia-monocromo-circuito_electronico-x750.jpg);	
+    background-size: 500px;
+	border-radius: 15px;
+	background-repeat: no repeat;
+	height: 109px;
+}
+
+#Fondo_principal h1 {
+	padding: 0px;
+	margin: 0px;
+	font-size: 50pt;
+	vertical-align: middle;
+	font-weight:bold;
+	color: white;
+	font-family: 'Luckiest Guy', cursive;	
+}
+
+#Fondo_principal p {
+	padding: 0px;
+	margin: 0px;
+	font-size: 15pt;
+	font-weight:cursive;
+	color: white;
+	font-family: 'Luckiest Guy', cursive;	
+}
+
+/* Secciones en general */
+.secciones{
+	background-color: gray;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+}
+
+
+        /* Barra izquierda */
+/*  Imagen menu principal  */
+
+#menu img{
+    background-size: cover;
+	border-radius: 0px;
+	height: 60px;
+    width: 60px;
+    float: left;
+}
+
+#menu a{
+    font-size: 25px;
+	color: black;
+	text-decoration: none;
+	outline: none;
+}
+
+#menu a:link{ /* No visitado */
+    color: black;
+
+}
+
+#menu a:visited{ /* Link visitado */
+    color: black;
+}
+
+#menu a:hover{ /* Cursor esta por encima*/
+    color: red;
+}
+
+#menu a:focus{ /* Cuendo se selecciona el link */
+     color: blue;
+}
+
+#menus a:active{ /* Al hacerle click */
+     background:black;
+}
+
+/*  fin Imagen menu principal  */
+
+.secciones-left{
+	width: 250px;
+	height: 1550px;
+	background-color: gray;
+	padding: 0px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+	display: table-cell;
+	border-collapse: separate;
+	padding-left: 4px;
+	padding-top: 0px;
+	padding-right: 4px;
+	padding-bottom: 0px;
+	margin: 15px;
+}
+
+
+#left-styles h1{ /* Temario*/
+font-size: 50px;
+color: black;
+}
+
+#left-styles h2{ /*Unidad 1*/
+font-size: 40px;
+color: black;
+}
+
+#left-styles a{
+	font-size: 25px;
+	color: black;
+	text-decoration: none;
+	outline: none;
+}
+
+#left-styles #pagina-principal a {
+    font-size: 40px;
+    color: black;
+}
+
+#left-styles a:link{ /* No visitado */
+    color: black;
+}
+
+#left-styles a:visited{ /* Link visitado */
+    color: black;
+}
+
+#left-styles a:hover{ /* Cursor esta por encima*/
+    color: red;
+}
+
+#left-styles a:focus{ /* Cuendo se selecciona el link */
+     color: blue;
+}
+
+#left-styles a:active{ /* Al hacerle click */
+     background: black;
+}
+/* fin barra izquierda */
+
+/* Seccion del centro*/
+.secciones-center{
+	width: 1200px;
+	height: 1550px;
+	background-color: gray;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+	vertical-align: top;
+	display: table-cell;
+	border-collapse: separate;
+	padding-left: 50px;
+	padding-top: 2px;
+	padding-right: 50px;
+	padding-bottom: 2px;
+	margin: 15px;
+}
+/* fin Seccion del centro*/
+
+/*imagenes */
+.imagenes {
+	padding: 10px;
+	height: 200px;
+	align-self:center;
+}
+
+#imgcomp {
+	height: 300px;
+	width: 600px;
+}
+
+#imgz {
+	height: 100px;
+	width: 500px;
+}
+
+.seccion-imgp {
+	width: 600px;
+	display: table-cell;
+	border-collapse: separate;
+	padding: 10px;
+}
+#pdf {
+	height: 100px;
+}
+
+/* Linea separadora */
+.linea-separadora{
+	width: 20PX;
+	display: table-cell;
+	vertical-align: top;
+	border-collapse: separate;
+	margin: 50PX;
+}
+/* fin Linea separaddora*/
+
+/*barra de navegacion*/
+.Ap {
+	padding: 10px;
+	width: 200px;
+	display: table-cell;
+	border-collapse: separate;
+ }
+ 
+ .secciones2{
+	display: table-cell;
+	border-collapse: separate;
+ }
+ 
+ .barra {
+	 top: 0;
+	 width: 98%;
+	 height: 40px;
+	 background-color:darkgray;
+	 position: fixed;
+	 z-index: 1000;
+	 border-radius: 10px;
+ }
+ 
+ #barra a{
+	 font-size: 10px;
+	 color: black;
+	 text-decoration: none;
+	 outline: none;
+	 display: block;
+ 
+ }
+ 
+ .barra a:link{ /* No visitado */
+	 color: black;
+ }
+ 
+ .barra a:visited{ /* Link visitado */
+	 color: black;
+ }
+ 
+ .barra a:hover{ /* Cursor esta por encima*/
+	 color: black;
+ }
+ 
+ .barra a:focus{ /* Cuendo se selecciona el link */
+	  color: blue;
+ }
+ 
+ /*fin de barra de navegacion*/
